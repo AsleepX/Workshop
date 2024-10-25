@@ -16,19 +16,34 @@ h1 {
     .content {
         margin: 0 5%; /* 在小屏幕上减少左右边距 */
     }
+    .details img {
+        width: 100%; /* 在小屏幕上图片宽度自适应 */
+        max-width: none; /* 取消最大宽度限制 */
+    }
+    nav {
+        position: relative; /* 在小屏幕上相对定位 */
+        transform: translateY(0); /* 确保导航栏可见 */
+    }
+    nav.show {
+        display: block; /* 确保导航栏在小屏幕上显示 */
+    }
 }
+
 .details {
     margin-top: 20px; /* 上边距 */
 }
 .details img {
-    width: 100%; /* 图片宽度自适应 */
-    max-width: 400px; /* 最大宽度 */
-    margin: 10px; /* 图片间距 */
+    width: 48%; /* 每个图片占据48%的宽度，留出间距 */
+    height: auto; /* 高度自适应 */
+    margin: 1%; /* 图片间距 */
 }
 .details-container {
     display: flex; /* 使用弹性布局 */
-    justify-content: center; /* 居中对齐 */
+    justify-content: space-between; /* 左右分布 */
+    flex-wrap: nowrap; /* 不换行，保持并排显示 */
+    overflow-x: auto; /* 允许横向滚动 */
 }
+
 .schedule {
     margin-top: 20px; /* 上边距 */
 }
@@ -78,7 +93,9 @@ nav {
     z-index: 1000; /* 确保在其他元素之上 */
     transform: translateY(-100%); /* 初始位置隐藏 */
     transition: transform 0.3s ease; /* 动效 */
+    overflow: hidden;
 }
+
 nav.show {
     transform: translateY(0); /* 显示导航栏 */
 }
@@ -88,7 +105,9 @@ nav ul {
     justify-content: space-around; /* 使用 space-around 使项之间的间距更均匀 */
     padding: 0; /* 去掉内边距 */
     margin: 0; /* 去掉外边距 */
+    flex-wrap: wrap; /* 允许换行 */
 }
+
 nav ul li {
     margin: 0 15px; /* 左右间距 */
 }

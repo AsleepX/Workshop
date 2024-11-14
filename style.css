@@ -58,6 +58,10 @@ h1 {
     display: none; /* 默认隐藏 */
     margin-left: 20px; /* 左边距 */
 }
+
+.details-content.show {
+    display: block; /* 显示内容 */
+}
 .location-container {
     display: flex; /* 使用弹性布局 */
     justify-content: space-between; /* 左右分布 */
@@ -119,4 +123,35 @@ nav ul li a {
 }
 nav ul li a:hover {
     color: #007BFF; /* 悬停时的颜色 */
+}
+
+.image-slider {
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+    position: relative;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.slider-container img {
+    width: 100%;
+    aspect-ratio: 16 / 9;  /* 设置16:9的长宽比 */
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* 鼠标悬停时暂停动画 */
+.slider-container:hover {
+    animation-play-state: paused;
+}
+
+.location img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0px 0;
 }

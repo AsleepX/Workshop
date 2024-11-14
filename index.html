@@ -10,78 +10,61 @@
 <body>
     <nav class="show">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#summary">summary</a></li>
-            <li><a href="#details">details</a></li>
-            <li><a href="#schedule">schedule</a></li>
-            <li><a href="#participants">participants</a></li>
-            <li><a href="#organization">organization</a></li>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#summary">会议简介</a></li>
+            <li><a href="#schedule">日程安排</a></li>
+            <li><a href="#participants">参会人员</a></li>
+            <li><a href="#organization">组织机构</a></li>
         </ul>
     </nav>
     <h1 style="padding-top: 100px;" id="home">第四届网络经济博弈论坛</h1>
     <div class="content" id="summary">
-        <div style="height: 60px;"></div>
-        <h2>Summary</h2>
+        <div style="height: 50px;"></div>
+        <h2>会议简介</h2>
         <p>
-            The Workshop on Algorithms for Learning and Economics (WALE*) brings together researchers from academia and industrial research working in the design of algorithms for economics and machine learning. The topics include: mechanism design, market design as well as econometrics and statistical inference in the presence of malicious or strategic behaviors. The discussion will involve both the design of novel algorithms as well as computational limitations. There is a technical program of introductory talks given by pioneers in different areas followed by talks by participants of the workshop. In addition, there will be ample time for informal discussion and collaboration.
-        </p>
-        <p>
-            *WALE is an invitation-only workshop, and due to unprecedented attendance, we are unable to accommodate any additional invitations.
+            2024年12月28日至12月29日，由中国计算机学会（CCF）主办，CCF计算经济学专业组、中国人民大学高瓴人工智能学院、北京大学前沿计算研究中心承办的第四届网络经济博弈论坛在上海财经大学召开。本次论坛邀请了来自北京大学、中国人民大学、中国科学院大学、上海财经大学、北京师范大学、清华大学、京东集团、智唐科技等知名高校和企业，众多专家学者和企业负责人参与报告、讨论和学习。论坛采取线上线下相结合的方式进行，是网络、计算经济学及博弈论等相关主题的单日研讨会，聚焦于算法博弈论、信息与计算社会科学、互联网经济学、网络博弈等相关的前沿研究。
         </p>
         
-        <div class="details" id="details">
-            <div style="height: 60px;"></div>
-            <h2>Details</h2>
-            <p>
-                WALE stands for Workshop on Algorithms for Learning and Economics. It was previously organized in 2022 and 2019 and is a successor to the GREAT workshop organized in past years.
-            </p>
-            <div class="details-container">
-                <img src="img/bg1.png" alt="Image 1">
-                <img src="img/bg2.jpg" alt="Image 2">
+        <div class="image-slider">
+            <div class="slider-container">
+                <img src="img/bg1.png" alt="Conference Image 1">
+                <img src="img/bg2.png" alt="Conference Image 2">
+                <img src="img/bg3.png" alt="Conference Image 3">
             </div>
-            <p>
-                It will take place on the beautiful island of Kefalonia which is the largest of the Ionian islands and is accessible by plane. The main conference venue is ARGILE RESORT & SPA.
-            </p>
-            <p>
-                The workshop will last for 5 days with each day having a different theme. The tentative topics and daily schedule are listed below.
-            </p>
         </div>
 
         <div class="schedule" id="schedule">
-            <div style="height: 60px;"></div>
-            <h2>Schedule (June 17-21, 2024)</h2>
-            <p>We have two locations for the talks. The location at the town of Lixouri for the first day and the location at the Argile Hotel for the rest of the days.</p>
+            <div style="height: 50px;"></div>
+            <h2>日程安排 (2024 年 12 月 28 - 29 日)</h2>
+            <p>下面是住宿与会议地点以及时间安排介绍：</p>
             
             <div class="location-container">
                 <div class="location">
-                    <h3>Location at Lixouri</h3>
-                    <p>This is in the building behind the main building of TEI Lixouriou. The default point at google maps for TEI Lixouriou is <a href="#">this</a>. The actual building is behind this main building <a href="#">here</a>.</p>
+                    <h3>住宿地点</h3>
+                    <p>上海檀程大酒店(财经大学店)，上海市杨浦区武东路188号</p>
+                    <img src="img/loc1.png" alt="住宿地点图片">
                 </div>
                 <div class="location">
-                    <h3>Location at Argile Resort</h3>
-                    <p>This is the main conference room of <a href="#">Argile Resort & Spa</a>. Please ask at the reception of the hotel for the exact location of the room.</p>
+                    <h3>会议地点</h3>
+                    <p>上海市杨浦区上海财经大学武东路校区，科研实验大楼一楼报告厅</p>
+                    <img src="img/loc2.png" alt="会议地点图片">
                 </div>
             </div>
+            <p>住宿预订事宜请联系上海檀程大酒店(财经大学店)销售部：成依君经理，联系电话：13701704560<br>
+                预订时请注明参会身份"第四届网络经济博弈论坛"，可享受会议协议价格优惠。</p>
 
-            <div class="day" onclick="toggleDetails('day1')">Monday, June 17 *</div>
-            <div id="day1" class="details-content">Details for Monday, June 17.</div>
+            <h3>时间安排</h3>
+            <div class="day" onclick="toggleDetails('day1')">12 月 28 日</div>
+            <div id="day1" class="details-content show">Details for Monday, June 17.</div>
 
-            <div class="day" onclick="toggleDetails('day2')">Tuesday, June 18</div>
-            <div id="day2" class="details-content">Details for Tuesday, June 18.</div>
+            <div class="day" onclick="toggleDetails('day2')">12 月 29 日</div>
+            <div id="day2" class="details-content show">Details for Tuesday, June 18.</div>
 
-            <div class="day" onclick="toggleDetails('day3')">Wednesday, June 19</div>
-            <div id="day3" class="details-content">Details for Wednesday, June 19.</div>
-
-            <div class="day" onclick="toggleDetails('day4')">Thursday, June 20</div>
-            <div id="day4" class="details-content">Details for Thursday, June 20.</div>
-
-            <div class="day" onclick="toggleDetails('day5')">Friday, June 21</div>
-            <div id="day5" class="details-content">Details for Friday, June 21.</div>
         </div>
 
         <div class="participants" id="participants">
-            <div style="height: 60px;"></div>
-            <h2>Confirmed Participants</h2>
+            <div style="height: 50px;"></div>
+            <h2>参会人员</h2>
             <ul class="participants-list">
                 <li>Abheek Ghosh (University of Oxford)</li>
                 <li>Aikaterini Mamali (Yale University)</li>
@@ -101,8 +84,8 @@
         </div>
 
         <div class="organization" id="organization">
-            <div style="height: 60px;"></div>
-            <h2>Organization</h2>
+            <div style="height: 50px;"></div>
+            <h2>组织机构</h2>
             <p>
                 Kira Goldner, Natalia Kotsani, Thanasis Lianeas, Chara Podimata, Katerina Sotiraki, Christos Tzamos, Kostas Zampetakis, and Manolis Zampetakis
             </p>

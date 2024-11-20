@@ -3,6 +3,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     font-size: 18px;
+    color: #333333;
 }
 
 h1 {
@@ -117,7 +118,7 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none; /* 去掉下划线 */
-    color: #333; /* 字体颜色 */
+    color: #333333; /* 字体颜色 */
     font-weight: bold; /* 加粗字体 */
     transition: color 0.3s; /* 过渡效果 */
 }

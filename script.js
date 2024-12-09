@@ -1,6 +1,11 @@
 function toggleDetails(day) {
     const content = document.getElementById(day);
-    content.style.display = content.style.display === 'none' ? 'block' : 'none';
+    const icon = document.querySelector(`.day[data-target="${day}"] .icon`);
+    const isHidden = !content.classList.contains('show');
+
+    content.classList.toggle('show');
+    icon.classList.toggle('rotated'); // 使用 CSS transform 来旋转图标
+    icon.textContent = '►'; // 保持图标始终为 ►，通过旋转来表示状态
 }
 
 let lastScrollTop = 0;
@@ -11,6 +16,20 @@ window.addEventListener("scroll", function() {
 document.addEventListener('DOMContentLoaded', function() {
     const container = document.querySelector('.slider-container');
     const images = container.querySelectorAll('img');
+    const days = document.querySelectorAll('.day');
+    days.forEach(day => {
+        // 创建图标元素
+        const icon = document.createElement('span');
+        icon.className = 'icon';
+        icon.textContent = '►'; // 默认图标
+
+        // 将图标插入到 .day 元素的开头
+        day.insertBefore(icon, day.firstChild);
+
+        // 获取目标内容的ID
+        const target = day.getAttribute('data-target');
+        day.addEventListener('click', () => toggleDetails(target));
+    });
     let currentIndex = 0;
     
     // 复制第一张图片到末尾以实现无缝滚动

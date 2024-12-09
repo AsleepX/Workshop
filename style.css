@@ -49,19 +49,31 @@ h1 {
     margin-top: 20px; /* 上边距 */
 }
 .day {
-    cursor: pointer; /* 鼠标悬停时显示为可点击 */
-    margin: 5px 0; /* 上下间距 */
-    padding: 10px; /* 内边距 */
-    background-color: #f0f0f0; /* 背景色 */
-    border: 1px solid #ccc; /* 边框 */
+    cursor: pointer;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex; /* 使用弹性布局 */
+    align-items: center; /* 垂直居中 */
 }
+
+.day .icon {
+    margin-right: 10px; /* 图标与文本之间的间距 */
+    font-size: 16px; /* 图标大小 */
+}
+
 .details-content {
-    display: none; /* 默认隐藏 */
-    margin-left: 20px; /* 左边距 */
+    margin-left: 20px;
+    overflow: hidden; /* 确保内容被隐藏 */
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
 }
 
 .details-content.show {
-    display: block; /* 显示内容 */
+    margin-left: 20px;
+    max-height: 1000px; /* 设置一个足够大的值，根据实际内容调整 */
+    transition: max-height 0.5s ease-in;
 }
 .location-container {
     display: flex; /* 使用弹性布局 */
@@ -155,4 +167,26 @@ nav ul li a:hover {
     max-width: 400px;
     height: auto;
     margin: 0px 0;
+}
+
+.time-cell {
+    white-space: nowrap;
+}
+
+table td, table th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+table {
+    width: 100%;
+}
+
+.icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.icon.rotated {
+    transform: rotate(90deg);
 }
